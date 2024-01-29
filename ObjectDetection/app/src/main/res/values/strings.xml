@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">보카 App</string>
+    <string name="image_view">Image View</string>
+    <string name="detect">Detect</string>
+    <string name="start">Start</string>
+    <string name="test">Test</string>
+    <string name="run_model">Running the model...</string>
+    <string name="restart">Restart</string>
+    <string name="select">Select</string>
+    <string name="live">Live</string>
+</resources>

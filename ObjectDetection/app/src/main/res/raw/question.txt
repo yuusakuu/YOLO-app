@@ -1,0 +1,7 @@
+dog
+cat
+rat
+frog
+snake
+
+

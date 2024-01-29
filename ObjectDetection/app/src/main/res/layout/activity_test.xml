@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.pytorch.demo.objectdetection.TestActivity">
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="모드"-->
+    <!--        android:textSize="30sp"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:gravity="center"-->
+    <!--        />-->
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="60dp"-->
+    <!--        android:background="#FFFFFF"-->
+    <!--        android:contentDescription="@string/image_view"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ImageButton
+        android:id="@+id/word"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+
+        android:src="@drawable/word"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        />
+
+    <ImageButton
+        android:id="@+id/sente"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:src="@drawable/sente"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        />
+
+    <ImageButton
+        android:id="@+id/test"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:src="@drawable/test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        />
+    <ImageButton
+        android:id="@+id/profile"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:src="@drawable/profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        />
+
+    <org.pytorch.demo.objectdetection.ResultView
+        android:id="@+id/resultView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/front_image"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1000dp"-->
+    <!--        android:background="#FFFFFF"-->
+    <!--        android:contentDescription="@string/image_view"-->
+    <!--        android:src="@drawable/main_quiz"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/detectButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:text="@string/detect"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
+
+
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/progressBar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:visibility="invisible"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="보카 ABC"
+        android:textSize="30sp"
+        android:layout_marginLeft ="20dp"
+        android:textColor="#000000" />
+
+
+    <Button
+        android:id="@+id/prac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연습하기"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginRight="100dp"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        />
+    <Button
+        android:id="@+id/tst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="테스트"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/run_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="모드"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_marginTop="130dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textAlignment="center"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/noun"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="자음"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:textColor="#BCBCBC"-->
+<!--        android:background="#ffffff"-->
+<!--        app:layout_constraintTop_toTopOf = "parent"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/verb"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="모음"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginLeft="100dp"-->
+<!--        android:textColor="#BCBCBC"-->
+<!--        android:background="#ffffff"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf = "parent"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/prase"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ABCD"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginLeft="200dp"-->
+<!--        android:textColor="#BCBCBC"-->
+<!--        android:background="#ffffff"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf = "parent"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/test"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="테스트"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginLeft="300dp"-->
+<!--        android:textColor="#000000"-->
+<!--        android:background="#ffffff"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf = "parent"/>-->
+
+    <Button
+        android:id="@+id/liveButton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft ="50dp"
+        android:layout_marginRight ="50dp"
+        android:drawableBottom="@drawable/pig_icon"
+        android:text="Question 1"
+        android:textAllCaps="false"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/run_mode" />
+
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintEnd_toStartOf="@+id/liveButton2"-->
+    <!--    app:layout_constraintHorizontal_bias="0.5"-->
+    <!--    app:layout_constraintStart_toEndOf="parent"-->
+
+    <Button
+        android:id="@+id/liveButton2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop ="32dp"
+        android:layout_marginLeft ="50dp"
+        android:layout_marginRight="50dp"
+        android:drawableBottom="@drawable/fox_icon"
+        android:text="Question 2"
+        android:textAllCaps="false"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveButton"
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:id="@+id/liveButton3"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop ="32dp"
+        android:layout_marginLeft ="50dp"
+        android:layout_marginRight="50dp"
+        android:drawableBottom="@drawable/fox_icon"
+        android:text="Question 3"
+        android:textAllCaps="false"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveButton2"
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:id="@+id/liveButton4"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop ="32dp"
+        android:layout_marginLeft ="50dp"
+        android:layout_marginRight="50dp"
+        android:drawableBottom="@drawable/pig_icon"
+        android:text="Question 4"
+        android:textAllCaps="false"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveButton3"
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:id="@+id/liveButton5"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop ="32dp"
+        android:layout_marginLeft ="50dp"
+        android:layout_marginRight="50dp"
+        android:drawableBottom="@drawable/pig_icon"
+        android:text="Question 5"
+        android:textAllCaps="false"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveButton4"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="이전"
+        app:layout_constraintTop_toBottomOf="@id/liveButton5"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@id/liveButton5"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@id/liveButton5"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@id/liveButton5"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@id/liveButton5"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        app:layout_constraintTop_toBottomOf="@id/liveButton5"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="다음"
+        app:layout_constraintTop_toBottomOf="@id/liveButton5"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/liveButton5"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="알파벳 탐지"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:layout_marginLeft="250dp"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/liveButton4"-->
+    <!--        />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/back_to_main"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="돌아가기"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:layout_marginRight="250dp"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/liveButton5"-->
+    <!--        />-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/liveButton_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알파벳 탐지"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="250dp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/liveButton4"
+            />
+
+        <Button
+            android:id="@+id/back_to_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="돌아가기"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="250dp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/liveButton5"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

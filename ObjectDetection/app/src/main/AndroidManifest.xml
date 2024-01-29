@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.pytorch.demo.objectdetection">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--이름 변경 = res - values - strings.xml -->
+        <!--서로 다른 앱으로 인식하게 하기 = gradle (module app) -> applicationId 변경 -->
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<!--        <activity-->
+<!--            android:name=".ObjectDetectionsActivity"-->
+<!--            android:configChanges="orientation"-->
+<!--            android:screenOrientation="portrait">-->
+<!--        </activity>-->
+        <activity android:name=".Expan_main"/>
+        <activity android:name=".AbstractCameraXActivity"/>
+        <activity android:name=".Shop"/>
+        <activity android:name=".Profile"/>
+        <activity android:name=".recy"/>
+        <activity android:name=".ABCDRecy"/>
+        <activity android:name=".VowRecy"/>
+        <activity android:name=".Recycler"/>
+        <activity android:name=".NounActivity"/>
+        <activity android:name=".VerbActivity"/>
+        <activity android:name=".PraseActivity"/>
+        <activity android:name=".TestActivity"/>
+        <activity android:name=".SubActivity"/>
+<!--        <activity android:name=".ObjectDetectionActivity"/>-->
+        <activity android:name=".Correct"/>
+        <activity android:name=".Incorrect"/>
+    </application>
+
+</manifest>
